@@ -51,6 +51,11 @@
     <input type="text" id="avgGradeCu" [(ngModel)]="avgGradeCu">
   </div>
 
+  <div class="field">
+    <label for="aisc">AISC (All in Sustaining Cost $)</label>
+    <input type="text" id="aisc" [(ngModel)]="aisc">
+  </div>
+
   <!-- Tonnage -->
 
   <div class="results">
@@ -95,11 +100,11 @@
     </p>
     <p class="result">
       <span>Value (USD)</span>
-      <span>${{ resourceValueAu | number:'1.0-0' }}</span>
+      <span>${{ resourceValueCu | number:'1.0-0' }}</span>
     </p>
     <p class="result result--total">
       <span>Value (GBP)</span>
-      <span>£{{ resourceValueAuConverted | number:'1.0-0' }}</span>
+      <span>£{{ resourceValueCuConverted | number:'1.0-0' }}</span>
     </p>
   </div>
 
@@ -118,6 +123,10 @@
     <div class="field">
       <label for="sharesInIssue">Shares in issue</label>
       <input type="text" id="sharesInIssue" [(ngModel)]="sharesInIssue">
+    </div>
+    <div class="field">
+      <label for="pctOwnershipAdjustment">% Ownership Adjustment</label>
+      <input type="text" id="pctOwnershipAdjustment" [(ngModel)]="pctOwnershipAdjustment">
     </div>
     <p class="result result--total">
       <span>Approximate Share Price</span>
