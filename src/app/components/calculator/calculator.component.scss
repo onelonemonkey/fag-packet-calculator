@@ -1,5 +1,5 @@
 .calculator {
-  max-width: 540px;
+  max-width: 720px;
   margin: 20px auto;
   padding: 2rem;
   border: 1px dashed #000;
@@ -16,6 +16,15 @@ h1, h2, p, label, input {
 
 img {
   max-width: 100%;
+}
+
+.details {
+  display: flex;
+}
+
+.calc-col {
+  flex-basis: 1;
+  flex-grow: 1;
 }
 
 .field {
