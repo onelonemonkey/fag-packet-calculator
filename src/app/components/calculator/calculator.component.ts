@@ -15,7 +15,9 @@ export class CalculatorComponent implements OnInit {
   goldPricePerOz:number = 1700;
   copperPricePerLb:number = 3.82;
   aisc:number = 400;
-  pctOwnershipAdjustment:number = 0;
+  pctOwnershipAdjustment:number = 100;
+  sharesHeld:number = 0;
+  sharesValue:number = 0;
 
   // Ore Body Info
   strikeLength:number = 500;
@@ -81,7 +83,8 @@ export class CalculatorComponent implements OnInit {
     this.resourceValueCu = this.calcLbs() * this.copperPricePerLb;
     this.resourceValueCuConverted = this.resourceValueCu / this.gbpToUsd;
     this.resourceTotalValue = this.resourceValueAuConverted + this.resourceValueCuConverted;
-    this.sharePriceValue = this.resourceTotalValue / this.sharesInIssue;
+    this.sharePriceValue = (( this.pctOwnershipAdjustment / 100 ) * this.resourceTotalValue ) / this.sharesInIssue;
+    this.sharesValue = this.sharePriceValue * this.sharesHeld;
   }
 
 }
