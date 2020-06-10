@@ -19,7 +19,7 @@ export class CalculatorComponent implements OnInit {
   strikeLength:number = 500;
   depth:number = 200;
   width:number = 100;
-  gravity:number = 100;
+  gravity:number = 2.5;
   avgGradeAu:number = 1.5;
   avgGradeCu:number = 2;
 

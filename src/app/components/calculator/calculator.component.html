@@ -53,7 +53,7 @@
   <div class="results">
     <p class="result result--total">
       <span>Total Tonnage</span>
-      <span>{{ tonnage }}</span>
+      <span>{{ tonnage | number:'1.0':'en-US' }}</span>
     </p>
   </div>
 
@@ -63,11 +63,11 @@
     <h2>Gold Value</h2>
     <p class="result">
       <span>Grams</span>
-      <span>{{ tonnageByGradeAu }}</span>
+      <span>{{ tonnageByGradeAu | number:'1.0':'en-US' }}</span>
     </p>
     <p class="result">
       <span>Troy Ounces</span>
-      <span>{{ ouncesTroy }}</span>
+      <span>{{ ouncesTroy | number:'1.0':'en-US' }}</span>
     </p>
     <p class="result">
       <span>Value (USD)</span>
@@ -81,14 +81,14 @@
 
   <!-- Copper -->
   <div class="results">
-    <h2>Gold Value</h2>
+    <h2>Copper Value</h2>
     <p class="result">
-      <span>Grams</span>
-      <span>{{ tonnageByGradeAu }}</span>
+      <span>Tonnes</span>
+      <span>{{ tonnageByGradeCu | number:'1.0':'en-US' }}</span>
     </p>
     <p class="result">
-      <span>Troy Ounces</span>
-      <span>{{ ouncesTroy }}</span>
+      <span>Pounds</span>
+      <span>{{ copperLbs | number:'1.0':'en-US' }}</span>
     </p>
     <p class="result">
       <span>Value (USD)</span>
@@ -114,7 +114,7 @@
     <h2>Share Value</h2>
     <div class="field">
       <label for="sharesInIssue">Shares in issue</label>
-      <input type="text" id="sharesInIssue" [(ngModel)]="sharesInIssue")]>
+      <input type="text" id="sharesInIssue" [(ngModel)]="sharesInIssue">
     </div>
     <p class="result">
       <span>Share Price</span>
