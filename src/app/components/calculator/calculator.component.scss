@@ -14,6 +14,10 @@ h1, h2, p, label, input {
   font-weight: 300;
 }
 
+img {
+  max-width: 100%;
+}
+
 .field {
   display: flex;
   margin-bottom: 1rem;
