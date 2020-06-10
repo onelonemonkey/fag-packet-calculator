@@ -10,42 +10,42 @@
 
   <div class="field">
     <label for="strikeLength">Strike Length (m)</label>
-    <input type="text" id="strikeLength" [(ngModel)]="strikeLength")]>
+    <input type="text" [(ngModel)]="strikeLength">
   </div>
 
   <div class="field">
     <label for="depth">Strike Depth (m)</label>
-    <input type="text" id="depth" [(ngModel)]="depth")]>
+    <input type="text" id="depth" [(ngModel)]="depth">
   </div>
 
   <div class="field">
     <label for="width">Strike Width (m)</label>
-    <input type="text" id="width" [(ngModel)]="width")]>
+    <input type="text" id="width" [(ngModel)]="width">
   </div>
 
   <div class="field">
     <label for="gravity">Gravity</label>
-    <input type="text" id="gravity" [(ngModel)]="gravity")]>
+    <input type="text" id="gravity" [(ngModel)]="gravity">
   </div>
 
   <div class="field">
     <label for="goldPricePerOz">Gold Price ($/Oz)</label>
-    <input type="text" id="goldPricePerOz" [(ngModel)]="goldPricePerOz")]>
+    <input type="text" id="goldPricePerOz" [(ngModel)]="goldPricePerOz">
   </div>
 
   <div class="field">
     <label for="avgGradeAu">Average Gold Grade (g/t)</label>
-    <input type="text" id="avgGradeAu" [(ngModel)]="avgGradeAu")]>
+    <input type="text" id="avgGradeAu" [(ngModel)]="avgGradeAu">
   </div>
 
   <div class="field">
     <label for="copperPricePerlb">Copper Price ($/lb)</label>
-    <input type="text" id="copperPricePerlb" [(ngModel)]="copperPricePerlb")]>
+    <input type="text" id="copperPricePerlb" [(ngModel)]="copperPricePerLb">
   </div>
 
   <div class="field">
     <label for="avgGradeAu">Average Grade Copper (%)</label>
-    <input type="text" id="avgGradeAu" [(ngModel)]="avgGradeAu")]>
+    <input type="text" id="avgGradeAu" [(ngModel)]="avgGradeAu">
   </div>
 
   <!-- Tonnage -->
@@ -105,7 +105,7 @@
     <h2>Total Value</h2>
     <p class="result">
       <span>Gold &amp; Copper</span>
-      <span>£{{ resourceValueTotal }}</span>
+      <span>£{{ resourceTotalValue }}</span>
     </p>
   </div>
 
