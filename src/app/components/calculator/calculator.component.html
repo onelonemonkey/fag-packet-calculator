@@ -1,1 +1,125 @@
-<p>calculator works!</p>
+<main class="calculator" (keyup)="updateResourceValue()">
+
+  <h1>Fag Packet Calculator</h1>
+
+  <h2>Resource Parameteres</h2>
+
+  <p>Please enters the values below to start your fag packet caclulation.</p>
+
+  <!-- Parameter Entry -->
+
+  <div class="field">
+    <label for="strikeLength">Strike Length (m)</label>
+    <input type="text" id="strikeLength" [(ngModel)]="strikeLength")]>
+  </div>
+
+  <div class="field">
+    <label for="depth">Strike Depth (m)</label>
+    <input type="text" id="depth" [(ngModel)]="depth")]>
+  </div>
+
+  <div class="field">
+    <label for="width">Strike Width (m)</label>
+    <input type="text" id="width" [(ngModel)]="width")]>
+  </div>
+
+  <div class="field">
+    <label for="gravity">Gravity</label>
+    <input type="text" id="gravity" [(ngModel)]="gravity")]>
+  </div>
+
+  <div class="field">
+    <label for="goldPricePerOz">Gold Price ($/Oz)</label>
+    <input type="text" id="goldPricePerOz" [(ngModel)]="goldPricePerOz")]>
+  </div>
+
+  <div class="field">
+    <label for="avgGradeAu">Average Gold Grade (g/t)</label>
+    <input type="text" id="avgGradeAu" [(ngModel)]="avgGradeAu")]>
+  </div>
+
+  <div class="field">
+    <label for="copperPricePerlb">Copper Price ($/lb)</label>
+    <input type="text" id="copperPricePerlb" [(ngModel)]="copperPricePerlb")]>
+  </div>
+
+  <div class="field">
+    <label for="avgGradeAu">Average Grade Copper (%)</label>
+    <input type="text" id="avgGradeAu" [(ngModel)]="avgGradeAu")]>
+  </div>
+
+  <!-- Tonnage -->
+
+  <div class="results">
+    <p class="result result--total">
+      <span>Total Tonnage</span>
+      <span>{{ tonnage }}</span>
+    </p>
+  </div>
+
+  <!-- Gold -->
+
+  <div class="results">
+    <h2>Gold Value</h2>
+    <p class="result">
+      <span>Grams</span>
+      <span>{{ tonnageByGradeAu }}</span>
+    </p>
+    <p class="result">
+      <span>Troy Ounces</span>
+      <span>{{ ouncesTroy }}</span>
+    </p>
+    <p class="result">
+      <span>Value (USD)</span>
+      <span>${{ resourceValueAu }}</span>
+    </p>
+    <p class="result result--total">
+      <span>Value (GBP)</span>
+      <span>£{{ resourceValueAuConverted }}</span>
+    </p>
+  </div>
+
+  <!-- Copper -->
+  <div class="results">
+    <h2>Gold Value</h2>
+    <p class="result">
+      <span>Grams</span>
+      <span>{{ tonnageByGradeAu }}</span>
+    </p>
+    <p class="result">
+      <span>Troy Ounces</span>
+      <span>{{ ouncesTroy }}</span>
+    </p>
+    <p class="result">
+      <span>Value (USD)</span>
+      <span>${{ resourceValueAu }}</span>
+    </p>
+    <p class="result result--total">
+      <span>Value (GBP)</span>
+      <span>£{{ resourceValueAuConverted }}</span>
+    </p>
+  </div>
+
+  <!-- Total -->
+  <div class="results">
+    <h2>Total Value</h2>
+    <p class="result">
+      <span>Gold &amp; Copper</span>
+      <span>£{{ resourceValueTotal }}</span>
+    </p>
+  </div>
+
+  <!-- Share Value -->
+  <div class="results">
+    <h2>Share Value</h2>
+    <div class="field">
+      <label for="sharesInIssue">Shares in issue</label>
+      <input type="text" id="sharesInIssue" [(ngModel)]="sharesInIssue")]>
+    </div>
+    <p class="result">
+      <span>Share Price</span>
+      <span>£{{ sharePriceValue | number:'1.4-4' }}</span>
+    </p>
+  </div>
+
+</main>
